@@ -224,6 +224,7 @@ def user_stats(df):
 def main():
     while True:
         city, month, day = get_filters()
+        raw_data(city)
         df = load_data(city, month, day)
         
         time_stats_choose = input("Would you like to see statistics on the most frequent times of travel?\nPlease Enter y/yes or no.\n")
