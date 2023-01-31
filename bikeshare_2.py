@@ -58,6 +58,18 @@ def get_filters():
     print('-'*40)
     return city, month, day
 
+def raw_data(city):
+    # load data file into a dataframe
+    df = pd.read_csv(CITY_DATA[city])
+
+    # Raw Data display if requested
+    raw_data = input('Would you like to see first 5 lines of raw data? Please enter yes/y or no/n.\n')
+    i=0
+    while raw_data == 'yes' or raw_data == 'y':
+        print(df.iloc[i:i+5])
+        raw_data = input('Would you like to see next 5 lines of raw data? Please enter yes/y or no/n.\n')
+        i += 5
+
 
 def load_data(city, month, day):
     """
@@ -70,16 +82,6 @@ def load_data(city, month, day):
     Returns:
         df - Pandas DataFrame containing city data filtered by month and day
     """
-    # load data file into a dataframe
-    df = pd.read_csv(CITY_DATA[city])
-
-    # Raw Data display if requested
-    raw_data = input('Would you like to see first 5 lines of raw data? Please enter yes/y or no/n.\n')
-    i=0
-    while raw_data == 'yes' or raw_data == 'y':
-        print(df.iloc[i:i+5])
-        raw_data = input('Would you like to see next 5 lines of raw data? Please enter yes/y or no/n.\n')
-        i += 5
     
     # convert the Start Time column to datetime
     df['Start Time'] = pd.to_datetime(df['Start Time'])
