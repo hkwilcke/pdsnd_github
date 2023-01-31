@@ -21,6 +21,7 @@ def get_filters():
     while True:
         city = input('Would you like to see data for Chicago, New York City or Washington?\n')
         city = city.lower()
+        # check for valid input
         try:
             CITY_DATA[city]
             break
@@ -34,6 +35,7 @@ def get_filters():
         month = input('Would you like to see data for a special month or for all months?\nChoose one month between january and june or choose all\n')
         month =  month.lower()
         month_test = ['january', 'february', 'march', 'april', 'may', 'june','all']
+        # check for valid input
         try:
             month_test.index(month)
             break
@@ -47,6 +49,7 @@ def get_filters():
         day = input('Would you like to see data for a special day of the week or for all days?\n')
         day = day.lower()
         days_of_week = ['monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday','sunday','all']
+        # check for valid input
         try:
             days_of_week.index(day)
             break
