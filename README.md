@@ -12,5 +12,6 @@ Some Statistics are Computed.
 bikeshare_2.py
 
 ### Credits
-
+https://sites.google.com/udacity.com/programdatascipython-project3/home?pli=1
+https://github.com/udacity/pdsnd_github
 
