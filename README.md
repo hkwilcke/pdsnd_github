@@ -10,11 +10,7 @@ Some Statistics are Computed.
 
 ### Files used
 bikeshare_2.py
-chicago.csv
-washington.csv
-new_york_city.csv
 
 ### Credits
-https://sites.google.com/udacity.com/programdatascipython-project3/home?pli=1
-https://github.com/udacity/pdsnd_github
+
 
